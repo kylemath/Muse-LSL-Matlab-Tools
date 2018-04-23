@@ -4,7 +4,9 @@ clear all;clc;close all;
 LSL_Muse_Initiation; %This initiates the Muse, opens an 'impedance' check, and begins recording.
 
 %% Analysis
-disp('Press any key to analyze spectra');     
+disp('Wait for EEG stream to show. Adjust headset till numbers green.');  
+disp('Close stream window and wait for gray screen of experiment. ');
+disp('After experiment is over, click here and press any key to analyze spectra');     
 pause;
 path = '../Muse-lsl-Baseline/';
 datafiles = dir([path 'data/']);
