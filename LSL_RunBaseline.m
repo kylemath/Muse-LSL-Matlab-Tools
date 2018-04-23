@@ -1,19 +1,15 @@
-%mex lsl_resolve_byprop.c
 clear all;clc;close all;
 
-%% Initiate LSL Muse connection and recording
+% Initiate LSL Muse connection and recording
 LSL_Muse_Initiation; %This initiates the Muse, opens an 'impedance' check, and begins recording.
 
 %% Analysis
-pause;
-pause; 
-pause;
-pause;
 disp('Press any key to analyze spectra');     
-path = '/Users/kyle/Dropbox/experiments/MuseLSL/Muse_LSL_Environments/Muse-lsl-Baseline/';
+pause;
+path = '../Muse-lsl-Baseline/';
 datafiles = dir([path 'data/']);
 subnum = datafiles(end-1).name(1:3); %get most recent file
-% subnum = '005';
+
 block_length = 20;
 F = .1:.1:30;
 wavenum = 10;
